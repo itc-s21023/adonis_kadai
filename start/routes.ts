@@ -28,3 +28,4 @@ Route.get('/' async ({ view }) => {
   return view.render('welcom',data)
 })
 Route.get('/sample', 'SampleController.index')
+Route.post('/sample', 'SamplesController.index_posted')
