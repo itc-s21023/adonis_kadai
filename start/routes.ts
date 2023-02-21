@@ -27,3 +27,4 @@ Route.get('/' async ({ view }) => {
   }
   return view.render('welcom',data)
 })
+Route.get('/sample', 'SampleController.index')
