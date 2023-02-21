@@ -20,13 +20,13 @@
 
 import Route from '@ioc:Adonis/Core/Route'
 
-Route.get('/' async ({ view }) => {
+Route.get('/', async ({ view }) => {
   const data = {
-    title: 'AdonisJS Sample',
-    message: 'これはサンプルで用意したページ'
+    title:'AdonisJS Sample',
+    message: 'これはサンプルで用意したページです。'
   }
-  return view.render('welcom',data)
+  return view.render('welcome',data)
 })
+
 Route.get('/sample', 'SampleController.index')
-Route.post('/sample', 'SamplesController.index_posted')
-Route.get('/sample/:id/:pass', 'SampleController.index')
+Route.get('/student', 'SamplesController.index_posted')
