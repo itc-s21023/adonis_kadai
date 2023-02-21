@@ -20,6 +20,10 @@
 
 import Route from '@ioc:Adonis/Core/Route'
 
-Route.get('/', async ({ view }) => {
-  return view.render('welcome')
+Route.get('/' async ({ view }) => {
+  const data = {
+    title: 'AdonisJS Sample',
+    message: 'これはサンプルで用意したページ'
+  }
+  return view.render('welcom',data)
 })
