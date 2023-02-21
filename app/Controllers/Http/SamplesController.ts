@@ -10,10 +10,9 @@ export default class SamplesController {
   }
 
   public async index_posted(ctx: HttpContextContract) {
-    const msg = ctx.request.input('msg')
     const data = {
       title: 'Sample',
-      message: 'こんにちは、' + msg + 'さん！'
+      message: JSON.stringify(ctx.request.body())
     }
     return ctx.view.render('samples/index', data)
   }
